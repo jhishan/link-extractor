@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>		
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}"/>
+
+	</head>
+
+	<body>
+		<div class="topbar">
+			<a class='navLinks' href="/">Link Extractor</a>
+		</div>
+
+		<h1> Link Extractor! </h1>
+		<form method="POST">
+		{{ form.hidden_tag() }}
+		{{ form.link.label(id='formLabel') }} {{ form.link(id='linkField', placeholder="Enter URL here") }} {{ form.submit(id='submitButton') }}
+		</form>
+
+		{% if urls %}
+		<ul id="links">
+			{% for url in urls %}
+				<li>{{ url[0] }}
+					<ul id="nestedLinks">
+						<a {% if url[1].startswith('http') %} href={{ url[1] }} {%else %} href={{ link + url[1]}} {% endif %}>{% if url[1].startswith('http') %} {{ url[1] }} {%else %} {{ link + url[1]}} {% endif %}</a>
+					</ul>
+				</li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	</body>
+
+</html>

@@ -1,0 +1,87 @@
+body{
+
+}
+
+.navLinks{
+	color: black;
+	padding:10px;
+    border-radius:1px;
+    font-size:16px;
+    font-weight:400;
+    border-style:solid;
+	border-width:3px;
+	border-color:#34495e;
+    transition:all linear 0.15s;
+	text-decoration:none;
+}
+
+/* visited link */
+a:visited {
+    text-decoration: none;
+}
+
+.topbar{
+	margin-top: 40px;
+	margin-bottom: 40px;
+	text-align: right;
+	font-family: georgia;
+}
+
+#links, #nestedLinks{
+	text-align: center;
+	list-style-type: none;
+	padding-left: 0px;
+}
+li{
+	padding: 10px;
+}
+h1{
+	text-align: center;
+	margin: 10px;
+	color: #34495E;
+}
+
+#links{
+	
+}
+form{
+	text-align: center;
+}
+#linkField{
+	border: solid 2px #21a1e1;
+	color: #21a1e1;
+	padding: 15px 40px;
+	font-size: 16px;
+	font-family: georgia;
+}
+#submitButton{
+	border: solid 2px green;
+	padding: 15px;
+	font-size: 16px;
+	color: green;
+	background-color: white;
+	font-family: georgia;
+}
+#formLabel{
+	font-family: georgia;
+	font-size: 16px;
+	margin-right: 10px;
+}
+input:focus{
+    outline: 0;
+}
+
+.numbers{
+	margin-top: 20px;
+}
+.number{
+	text-align: center;
+	margin: 4px;
+	color: #34495E;
+}
+#beyGif{
+	margin-top: 20px;
+	margin-right: auto;
+	margin-left: auto;
+	display: block;
+}
